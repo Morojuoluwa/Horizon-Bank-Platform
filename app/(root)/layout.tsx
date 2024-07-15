@@ -1,5 +1,7 @@
+import MobileNav from "@/components/MobileNav";
 import Sidebar from "@/components/Sidebar";
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
+import Image from "next/image";
 
 
 export default function RootLayout({
@@ -11,8 +13,18 @@ export default function RootLayout({
   const loggedIn = {firstName: 'Adrian', lastName: 'Abimbola'}
   return (
     <main className=" flex h-screen w-full font-inter">
-        <Sidebar/>
+        <Sidebar user={loggedIn}/>
+
+        <div className="size-full flex flex-col">
+          <div className="root-layout">
+            <Image src="/icons/logo.svg" width={30} height={30} alt="logo"/>
+            <div>
+              <MobileNav user={loggedIn}/>
+            </div>
+
+          </div>
         {children}
+        </div>
     </main>
   );
 }
