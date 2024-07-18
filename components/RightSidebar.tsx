@@ -51,7 +51,7 @@ const RightSidebar = ({user, transactions, banks}: RightSidebarProps) => {
                             userName={`${user.firstName} ${user.lastName}`}
                             showBalance={false}
                             />
-                            hey
+                          
                         </div>
                         {banks[1] && (
                             <div className=' absolute right-0 top-8 z-0'>
@@ -60,7 +60,7 @@ const RightSidebar = ({user, transactions, banks}: RightSidebarProps) => {
                                  userName={`${user.firstName} ${user.lastName}`}
                                  showBalance={false}
                                 />
-                                hello
+                                
                             </div>
                         )}
                     </div>
